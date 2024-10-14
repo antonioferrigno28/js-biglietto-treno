@@ -15,13 +15,13 @@ let userAge = parseInt(prompt("Inserisci l'eta del passeggero"));
 
 //ELABORAZIONE
 
-//SE il numero di km è maggiore di 0 AND l'età è maggiore di 0
-if (userKm > 0 && userAge > 0) {
-  // calcolo il prezzo del biglietto
-  let ticketPrice = userKm * 0.21;
+// variabile per il prezzo del biglietto
+let ticketPrice = userKm * 0.21;
 
+//SE il numero di km è maggiore di 0 AND l'età è compresa tra 18 e 65
+if (userKm > 0 && userAge > 0 && userAge >= 18 && userAge <= 65) {
   // DEBUG stampo il prezzo del biglietto
-  console.log("Il prezzo del biglietto é " + ticketPrice + "€");
+  console.log("Il prezzo del biglietto é " + ticketPrice.toFixed(2) + "€");
 }
 
 //SE l'età è minore di 18
@@ -29,7 +29,7 @@ else if (userAge < 18) {
   // applico al prezzo del biglietto uno sconto del 20%
   ticketPriceNew = ticketPrice - (ticketPrice * 20) / 100;
   // stampo il prezzo FINALE del biglietto
-  console.log("Il prezzo finale è " + ticketPriceNew + "€");
+  console.log("Il prezzo finale è " + ticketPriceNew.toFixed(2) + "€");
 }
 
 //SE l'età è maggiore di 65
@@ -38,7 +38,7 @@ else if (userAge > 65) {
   ticketPriceNew = ticketPrice - (ticketPrice * 40) / 100;
   // stampo il prezzo FINALE del biglietto
 
-  console.log("Il prezzo finale è " + ticketPriceNew + "€");
+  console.log("Il prezzo finale è " + ticketPriceNew.toFixed(2) + "€");
 }
 
 //ALTRIMENTI
