@@ -22,7 +22,7 @@ let ticketPrice = userKm * 0.21;
 if (isNaN(userKm) || isNaN(userAge)) {
   // stampo un messaggio di errore
   alert(
-    "Inserisci un numero positivo o maggiore di zero sia per i km che per l'eta"
+    "Inserisci un numero positivo o maggiore di zero sia per i km che per l'età"
   );
 }
 
@@ -34,7 +34,7 @@ if (userAge >= 18 && userAge <= 65) {
 } else if (userKm <= 0 || userAge <= 0) {
   // stampo un messaggio di errore
   alert(
-    "Inserisci un numero positivo o maggiore di zero sia per i km che per l'eta 1"
+    "Inserisci un numero positivo o maggiore di zero sia per i km che per l'età"
   );
 }
 //SE l'età è minore di 18
